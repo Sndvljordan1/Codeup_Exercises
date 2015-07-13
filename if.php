@@ -1,8 +1,8 @@
  <?php
 
- $a = 25;
- $b = 11;
- $c = '7';
+ $a = 32;
+ $b = 42v;
+ $c = '10';
 
  if ($a < $b) {
      // output the appropriate result
@@ -16,7 +16,7 @@
  if ($b >= $c) {
      // output the appropriate result
      echo "$b is greater than or equal to $c\n";
- }else{
+ } else {
      // output the appropriate result
      echo "$b is less than or equal to $c\n";
  }
@@ -27,10 +27,10 @@
  }elseif ($b === $c) {
      // output the appropriate result
      echo "$b is identical to $c\n";
- }elseif ($b != $c) {
-     echo "$b is not equal to $c\n";
  }elseif ($b !== $c) {
      echo "$b is not identical to $c\n";
+ }else {
+     echo "$b is not equal to $c\n";
  }
 
  ?>
