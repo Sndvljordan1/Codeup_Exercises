@@ -1,5 +1,4 @@
 <?php
-
 if($argc < 2){
 	$a = 2;
 	$b = 78;
@@ -9,71 +8,49 @@ if($argc < 2){
 }
 function add($a, $b)
 {
-	if (is_numeric($a) && is_numeric($b)) {
-	    if($a == 0 || $b == 0){
-	    	return "WHY";
-	    }else {
-	        return $a + $b;
-	    }
-	} else {
-	    return "ERROR: Both arguments must be numbers\n";
-	}
+	error($a, $b);
+		return $a + $b;
 }
-
 function subtract($a, $b)
 {
-    // Add code here
-	if (is_numeric($a) && is_numeric($b)) {
-	    if($a == 0 || $b == 0){
-	    	return "YOU";
-	    }else {
-	        return $a - $b;
-	    }
-	} else {
-	    return "ERROR: Both arguments must be numbers\n";
-	}
+	error($a, $b);
+	return $a - $b;
 }
-
 function multiply($a, $b)
 {
-    // Add code here	
-    if (is_numeric($a) && is_numeric($b)) {
-        if($a == 0 || $b == 0){
-	    	return "DO";
-	    }else {
-	        return $a * $b;
-	    }
-	} else {
-	    return "ERROR: Both arguments must be numbers\n";
-	}
+	error($a, $b);
+	return $a * $b;
 }
-
 function divide($a, $b)
 {
-    // Add code here
-	if (is_numeric($a) && is_numeric($b)) {
-	    if($a == 0 || $b == 0){
-	    	return "DIS";
-	    }else {
-	        return $a / $b;
-	    }
-	} else {
-	    return "ERROR: Both arguments must be numbers\n";
+	error($a, $b);
+	if ($b == 0){
+		echo "YOU CAN'T DIVIDE BY ZERO!";
+	}else{
+		return $a / $b;
 	}
 }
 function modulus($a, $b)
 {
-	if (is_numeric($a) && is_numeric($b)) {
-		if($a == 0 || $b == 0){
-	        return "?!?!?!?!?!?!?!?";
-	    }else {
-	    	return $a % $b;
-	    }
-	} else {
-	    return "ERROR: Both arguments must be numbers\n";
+	error($a, $b);
+	if ($b == 0){
+		echo "YOU CAN'T DIVIDE BY ZERO!";
+	}else{
+		return $a % $b;
+	}
+
+}
+function error($a, $b)
+{
+	if (is_numeric($a) == false || is_numeric($b) == false) {
+		echo " " . PHP_EOL;
+	    echo "'\$a' = $a, '\$b' = $b \nERROR: Both arguments must be numbers\n";
+	    echo " " . PHP_EOL;
+	    return false;
+	}else{
+		return true;
 	}
 }
-// Add code to test your functions here
 echo add($a, $b) . PHP_EOL;
 echo " " . PHP_EOL;
 echo subtract($a, $b) . PHP_EOL;
