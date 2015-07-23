@@ -1,0 +1,39 @@
+2015-07-20 15:11:39INFO:This is an info message.
+
+2015-07-20 15:11:39ERROR:This is an error message.
+
+2015-07-20 15:12:24 INFO:This is an info message.
+
+2015-07-20 15:12:24 ERROR:This is an error message.
+
+2015-07-20 15:12:42 INFO: This is an info message.
+
+2015-07-20 15:12:42 ERROR: This is an error message.
+
+2015-07-20 15:17:57 INFO: This is an info message.
+
+2015-07-20 15:17:57 ERROR: This is an error message.
+
+2015-07-20 15:18:37 INFO: This is an info message.
+
+2015-07-20 15:18:37 ERROR: This is an error message.
+
+2015-07-20 15:20:26 [INFO] This is an info message.
+
+2015-07-20 15:20:26 [ERROR] This is an error message.
+
+2015-07-20 15:27:26 [INFO] This is an info message.
+
+2015-07-20 15:27:26 [ERROR] This is an error message.
+
+2015-07-20 15:29:34 [INFO] This is an info message.
+
+2015-07-20 15:29:34 [ERROR] This is an error message.
+
+2015-07-20 15:42:51 [INFO] This is an info message.
+
+2015-07-20 15:42:51 [ERROR] This is an error message.
+
+2015-07-20 16:30:04 [INFO] Han shot first.
+
+2015-07-20 16:30:04 [ERROR] IT'S A TRAP!!!!
