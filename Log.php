@@ -2,24 +2,23 @@
 class Log
 {
 	public $filename;
-	
-
-
-	public function logMessage($logLevel, $message)
-	{
-	    $filename = "log-" . date("Y-m-d") . ".log";
-	    $handle = fopen($filename, 'a');
-	    fwrite($handle, PHP_EOL . date("Y-m-d H:i:s ") . "[{$logLevel}] $message" . PHP_EOL);
-	    fclose($handle);
+	public $handle;
+	public function __construct($prefix = "log"){
+		$this->filename= "{$prefix}-" . date("Y-m-d") . ".log";
+		$this->handle = fopen($this->filename, 'a');
 	}
 	public function logInfo($message){
-	    return logMessage("INFO", $message);
+	    return $this->logMessage("INFO", $message);
 	}
 	public function logError($message){
-	    return logMessage("ERROR", $message);
+	    return $this->logMessage("ERROR", $message);
 	}
-	logInfo("Han shot first.");
-	logError("IT'S A TRAP!!!!");
+	public function logMessage($logLevel, $message)
+	{
+	    fwrite($this->handle, PHP_EOL . date("Y-m-d H:i:s ") . "[{$logLevel}] $message" . PHP_EOL);
+	}
+	public function __destruct(){
+		fclose($this->handle);
+	}
 }
-
  ?>
